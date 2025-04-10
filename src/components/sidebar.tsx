@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fi';
 
 export function Sidebar() {
+  
   const pathname = usePathname();
   
   const navItems = [
@@ -28,7 +29,7 @@ export function Sidebar() {
     <div className="w-64 bg-white shadow-lg flex flex-col">
       <div className="p-6 border-b">
         <h1 className="text-xl font-bold text-indigo-600">ClassTrack</h1>
-        <p className="text-sm text-gray-500">Attendance System</p>
+        <p className="text-sm text-blue-900">Attendance System</p>
       </div>
       
       <nav className="flex-1 p-4 space-y-2">
@@ -55,5 +56,6 @@ export function Sidebar() {
         </button>
       </div>
     </div>
+    
   );
 }

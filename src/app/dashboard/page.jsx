@@ -1,3 +1,6 @@
+"use client";
+
+
 import { Card } from '@/components/card';
 import { AttendanceChart } from '@/components/attendance-chart';
 
@@ -32,8 +35,8 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card className="p-6">
-          <h2 className="text-lg font-medium mb-4">Recent Absences</h2>
-          <div className="space-y-4">
+          <h2 className="text-lg font-medium mb-4 text-orange-600">Recent Absences</h2>
+          <div className="space-y-4 text-yellow-900">
             {['John Doe', 'Jane Smith', 'Mike Johnson'].map((name) => (
               <div key={name} className="flex items-center justify-between">
                 <span>{name}</span>
@@ -44,8 +47,8 @@ export default function Dashboard() {
         </Card>
 
         <Card className="p-6">
-          <h2 className="text-lg font-medium mb-4">Upcoming Leaves</h2>
-          <div className="space-y-4">
+          <h2 className="text-lg font-medium mb-4 text-orange-600">Upcoming Leaves</h2>
+          <div className="space-y-4 text-yellow-900" >
             {['Sarah Williams (Tomorrow)', 'David Brown (Next Week)'].map((item) => (
               <div key={item} className="flex items-center justify-between">
                 <span>{item}</span>
