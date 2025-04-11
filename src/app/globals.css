@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  color: #4B5563;
+}
+
+.fc .fc-button {
+  background-color: #F3F4F6;
+  border-color: #E5E7EB;
+  color: #4B5563;
+}
+
+.fc .fc-button:hover {
+  background-color: #E5E7EB;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #6B7280;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #FEF3C7;
+}
