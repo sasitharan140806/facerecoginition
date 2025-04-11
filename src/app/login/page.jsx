@@ -25,27 +25,29 @@ export default function LoginPage() {
     }
   }, [error, success]);
 
-  const handleSubmit = async (e, ReactFormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setError('');
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsLoading(true);
+  setError('');
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      if (email === 'admin@school.com' && password === 'admin123') {
-        setSuccess(true);
-        setTimeout(() => router.push('/dashboard'), 1000);
-      } else {
-        throw new Error('Invalid credentials');
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Login failed');
-    } finally {
-      setIsLoading(false);
+  try {
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    // Check if email ends with '@gmail.com'
+    if (email.endsWith('@gmail.com')) {
+      setSuccess(true);
+      setTimeout(() => router.push('/dashboard'), 1000);
+    } else {
+      throw new Error('Only Gmail addresses are allowed');
     }
-  };
+  } catch (err) {
+    setError(err instanceof Error ? err.message : 'Login failed');
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
