@@ -12,6 +12,7 @@
     "@fullcalendar/daygrid": "^6.1.17",
     "@fullcalendar/interaction": "^6.1.17",
     "@fullcalendar/react": "^6.1.17",
+    "@radix-ui/react-switch": "^1.1.4",
     "@types/bcryptjs": "^2.4.6",
     "bcryptjs": "^3.0.2",
     "chart.js": "^4.4.8",
